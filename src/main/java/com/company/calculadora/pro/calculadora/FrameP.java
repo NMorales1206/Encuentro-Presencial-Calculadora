@@ -254,9 +254,14 @@ public class FrameP extends javax.swing.JFrame {
         try{
             double num1 = Integer.parseInt(n1.getText());
             double num2 = Integer.parseInt(n2.getText());
+            if(num2==0){
+            String div1="Indeterminado";
+            resultado.setText(String.valueOf(div1));
+            }else{
             double div = num1/num2;
-
             resultado.setText(String.valueOf(div));
+            }
+            
         }catch(Exception ex){
             JOptionPane.showMessageDialog(null,"Unicamente números");
         }
@@ -267,9 +272,15 @@ public class FrameP extends javax.swing.JFrame {
         try{
             double num1 = Integer.parseInt(n1.getText());
             double num2 = Integer.parseInt(n2.getText());
-            double mod = num1%num2;
-
-            resultado.setText(String.valueOf(mod));
+            
+            if(num2==0){
+            String res1="Indeterminado";
+            resultado.setText(String.valueOf(res1));
+            }else{
+            double res = num1%num2;
+            resultado.setText(String.valueOf(res));
+            }
+            
         }catch(Exception ex){
             JOptionPane.showMessageDialog(null,"Unicamente números");
         }
